@@ -7,10 +7,10 @@ double pown(double value, uint16_t n) {
   double count = 1;
     if (n == 0) {
         return 1;
-    } else if (value==0){
+    } else if (value == 0) {
         return 0;
     } else {
-        while(true) {
+        while (true) {
             count *= value;
             n--;
             if (n == 0) {
@@ -44,7 +44,7 @@ double expn(double x, uint16_t count) {
   uint16_t i;
     double schet = 0;
     for (i = 0; i <= count; i++) {
-        schet += calcItem(x,i);
+        schet += calcItem (x,i);
     }
     return schet;
 }
@@ -66,7 +66,7 @@ double cosn(double x, uint16_t count) {
   uint16_t k;
     double schet = 0;
     for (k = 1; k <= count; k++) {
-        if (k==2) {
+        if (k == 2) {
             schet -= calcItem(x, 2 * k - 2);
         } else {
             schet += calcItem(x, 2 * k - 2);
