@@ -4,34 +4,21 @@
 
 
 double pown(double value, uint16_t n) {
-  double count = 1;
-    if (n == 0) {
+  if (n == 0) {
         return 1;
-    } else if (value == 0) {
+    } else if (value == 0){
         return 0;
     } else {
-        while (true) {
-            count *= value;
-            n--;
-            if (n == 0) {
-                return count;
-            }
-        }
+        return value * pown(value, n - 1);
     }
 }
 
 uint64_t fact(uint16_t n) {
   uint16_t count = 1;
-    while (true) {
-        if (n == 0) {
-            return 1;
-        } else {
-            count *= n;
-            n--;
-            if (n == 0) {
-                return count;
-            }
-        }
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * fact(n - 1);
     }
 }
 
