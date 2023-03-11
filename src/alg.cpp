@@ -44,7 +44,7 @@ double expn(double x, uint16_t count) {
   uint16_t i;
     double schet = 0;
     for (i = 0; i <= count; i++) {
-        schet += calcItem (x,i);
+        schet += calcItem(x, i);
     }
     return schet;
 }
