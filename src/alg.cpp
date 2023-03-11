@@ -40,11 +40,7 @@ double sinn(double x, uint16_t count) {
   uint16_t k;
     double schet = 0;
     for (k = 1; k <= count; k++) {
-        if (k == 2) {
-            schet -= calcItem(x, 2 * k - 1);
-        } else {
-            schet += calcItem(x, 2 * k - 1);
-        }
+        schet += pown(-1, k - 1) * calcItem(x, 2 * k - 1);
     }
     return schet;
 }
@@ -53,11 +49,7 @@ double cosn(double x, uint16_t count) {
   uint16_t k;
     double schet = 0;
     for (k = 1; k <= count; k++) {
-        if (k == 2) {
-            schet -= calcItem(x, 2 * k - 2);
-        } else {
-            schet += calcItem(x, 2 * k - 2);
-        }
+        schet += pown(-1, k - 1) * calcItem(x, 2 * k - 2);   
     }
     return schet;
 }
