@@ -49,7 +49,7 @@ double cosn(double x, uint16_t count) {
   uint16_t k;
     double schet = 0;
     for (k = 1; k <= count; k++) {
-        schet += pown(-1, k - 1) * calcItem(x, 2 * k - 2);  
+        schet += pown(-1, k - 1) * calcItem(x, 2 * k - 2);
     }
     return schet;
 }
